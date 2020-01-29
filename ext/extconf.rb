@@ -28,7 +28,7 @@ end
 if enable_config('lto', true)
   $CFLAGS << ' -flto'
   $CXXFLAGS << ' -flto'
-  $LDFLAGS << ' -flto'
+  $LDFLAGS << ' -fuse-ld=lld -flto'
 end
 
 # Disable noisy compilation warnings.
